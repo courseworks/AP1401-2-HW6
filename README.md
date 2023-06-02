@@ -39,5 +39,42 @@ Answer questions:
 
     $$\omega_i = \frac{2}{(1-x_i^2)[P_n'(x_i)]^2}$$
 
-    Formulas 2 and 3 can be used to calculate several legendary sentences and their derivatives.
+    Following formulas can be used to calculate Legendre polynomials and their derivatives.
+    $$P_0(x)  = 1, P_1(x)  = x, nP_n(x)  = (2n-1)xP_{n-1}(x) - (n-1)P(n-2)(x)$$
+    $$P_n'(x) = \frac{n}{x^2-1}(xP_n(x) - P_n-1(x))$$
 
+    For find zeros of Legendre, use `newton-raphson` method. For initial guess use:
+    $$x_0 = cos\left(\pi\frac{i-\dfrac{1}{4}}{n + \dfrac{1}{2}}\right)$$
+
+    Hint:
+    $$\int_a^bf(x)dx \approx \frac{b-a}{2}\sum_{i-1}^n\omega_if(\frac{b-a}{2}x+\frac{b+a}{2})$$
+
+    - suppose $f(x) = \dfrac{x^3}{x+1}cos(x^2), \quad a = 0, \quad b = 1$
+    - use recursive function to find Legendre polynomials.
+    - This program is written with CPP programming language as Object Oriented and is attached. The input of this program is the number n, that is, the degree of Legendre's multi-sentence. You can also check your answer with this [link](http://www.wolframalpha.com/input/?i=int(((x%5E3)%2F(x%2B1))*cos(x%5E2),+0,+1)).
+    - Write the program in a similar way using python programming language and measure the execution time. Make sure to write the program in OOP form, that is, using the class.
+    - By `subprocess` library run cpp code in python and measure the execution time.
+    - print the table that its rows are n and columns are execution time of cpp and python code.
+    - plot this table with `matplotlib` and save it in `result.pdf`.(with code)
+
+5. You are given an array of numbers. We call a number special if it is divisible by 6 and if its number is divisible by 6 at least in one of the positions that appear in the array. Note that the index of the first member of the array starts from 1.
+
+    - input: array of numbers.
+    - output: In the output line alone, special numbers are printed in ascending order so that there is a space between both numbers. Note that each special number appears exactly once in the output.
+    - example:
+      - input1: 
+        ```python
+        3 4 1 37 21 18 23 21 27 22 43 21
+        ```
+      - output1:
+        ```python
+        18
+        ```
+      - input2: 
+        ```python
+        1 2 3 4 5 6 7 8 9 10 11 12
+        ```
+      - output2:
+        ```python
+        6 12
+        ```
