@@ -28,16 +28,20 @@ Answer questions:
 
 3. We want to estimate $\pi$.
 
-    First, consider a square with side 1 and enclose a circle in it. In this order, first define a function `IsInCircle(x, y)` that determines whether a point is inside the circle or not. Then, by generating the number of random points that are inside the square, calculate the ratio of the number of points inside the circle to the total number of points. This ratio is equal to $\pi$. In this way, write the find function in such a way that determines how many random points should be at least in order to reach an error of one percent. (adding random points until we reach the desired error)
+    First, consider a square with side 1 and enclose a circle in it. In this order, first define a function `IsInCircle(x, y)` that determines whether a point is inside the circle or not. Then, by generating the number of random points that are inside the square, calculate the ratio of the number of points inside the circle to the total number of points. This ratio is equal to $\pi$. In this way, write the `find` function in such a way that determines how many random points should be at least in order to reach an error of one percent. (adding random points until we reach the desired error)
 
 4. We want to calculate $\int_a^b f(x) dx$ with Gauss method. The working method is that we can approximate any integral between -1 and 1 by the following formula:
-    $$
+
+    ```math
         \int_{-1}^1 f(x) dx \approx \sum_{i=1}^n \omega_if(x_i)
-    $$
+    ```
+
     Such that $x_i$ is zeros of Legendre polynomials.
-    By using the zeros of the Legendre polynomials, $\omega_i$ coefficients can be calculated by 
-    $$
+    By using the zeros of the Legendre polynomials, $\omega_i$ coefficients can be calculated by
+
+    ```math
         \omega_i = \frac{2}{(1-x_i^2)[P_n'(x_i)]^2}
-    $$
+    ```
+
     Formulas 2 and 3 can be used to calculate several legendary sentences and their derivatives.
 
